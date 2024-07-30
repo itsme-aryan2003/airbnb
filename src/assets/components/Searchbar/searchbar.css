@@ -1,0 +1,128 @@
+:root{
+    --clr-border:#ddd
+}
+.Searchbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width:55%;
+    margin:auto;
+    border-radius: 9em;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1000;
+
+    
+    
+    .location{
+        flex-grow:2;
+        cursor:pointer;
+        padding-left: 20px;
+    }
+    .flexbox{
+        height: 100%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    
+    .t1-dark{
+        color: #222;
+        font-size: 14px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-stretch: expanded;
+    }
+
+    .crsr-txt{
+        cursor:text;
+    }
+    .t1-light{
+        color: #888;
+        font-size: 14px;
+        font-family: 'Roboto',;
+        font-weight: 400;
+        font-stretch: expanded;
+    }
+    .check-in{
+        flex-grow:1;
+        cursor:pointer;
+        padding-left: 20px;
+    }
+    .check-out{
+        flex-grow:1;
+        cursor:pointer;
+        padding-left: 20px;
+    }
+    .who{
+        flex-grow:2;
+        cursor:pointer;
+        height: 100%;
+        padding-left: 20px;
+    }
+    
+    .search{
+        padding-right: 10px;
+        height: 100%;
+    }
+    .who-child{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height:100%;
+    }
+    .d1:hover,.d2:hover,.d3:hover,
+    .d4:hover{
+        border-radius: 9em;
+        background: #ebebeb;
+    }
+    .d1:hover + .d2{
+        background-image:
+        linear-gradient(0deg, transparent,transparent 25%, transparent 25%, transparent 75%, transparent 75%),
+        linear-gradient(270deg, transparent, transparent 25%, transparent 25%, transparent 75%, transparent 75%);
+    }
+    .d2:hover + .d3{
+        background-image:
+        linear-gradient(0deg, transparent,transparent 25%, transparent 25%, transparent 75%, transparent 75%),
+        linear-gradient(270deg, transparent, transparent 25%, transparent 25%, transparent 75%, transparent 75%);
+
+    }
+    .d3:hover + .d4{
+        background-image:
+        linear-gradient(0deg, transparent,transparent 25%, transparent 25%, transparent 75%, transparent 75%),
+        linear-gradient(270deg, transparent, transparent 25%, transparent 25%, transparent 75%, transparent 75%);
+        
+    }
+    .box {
+        background-image:
+        linear-gradient(0deg, transparent,transparent 25%, var(--clr-border) 25%, var(--clr-border) 75%, transparent 75%),
+        linear-gradient(270deg, transparent, transparent 25%, transparent 25%, transparent 75%, transparent 75%);
+        background-position:  0 0, 0 0, 100% 0, 0 100%;
+        background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
+        background-repeat: no-repeat;
+    }
+}
+.hidden{
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
+    transition: width 0.3s ease-in-out;
+    z-index: 1000;
+    height: 46px;
+    position:fixed;
+    background: white;
+    width:25%;
+    top:64px;
+    left:27.5%;
+    right: 27.5%;
+    
+}
+.gone{
+    z-index:0;
+    position: absolute;
+}
+.hidden:hover{
+    box-shadow: 0px 6px 10px rgb(0 0 0 / 0.2);
+}

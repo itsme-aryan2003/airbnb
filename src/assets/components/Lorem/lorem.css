@@ -1,0 +1,13 @@
+.search-bar{
+    height: 20px;
+}
+.computer{
+    font-size: 10px;
+}
+.computer-cover{
+    height: 900px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
